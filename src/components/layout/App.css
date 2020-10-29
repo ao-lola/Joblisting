@@ -1,0 +1,155 @@
+body {
+  font-family: "lato";
+}
+
+p {
+  font-family: "lato";
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+.my-form {
+  margin-top: 190px;
+  margin-left: 350px;
+}
+
+#input-email,
+#input-password {
+  width: 400px;
+}
+
+.main-text {
+  margin-top: 60px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.wrapper {
+  display: flex;
+
+  align-items: stretch;
+}
+
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.938);
+  color: #fff;
+  transition: all 0.3s;
+  padding: 20px;
+}
+
+.sidebar-header {
+  padding: 20px;
+}
+
+.navbar {
+  width: 1120px;
+}
+
+.navbar-nav {
+  margin-right: 30px;
+}
+
+.nav-link {
+  font-size: 13px;
+  margin-right: 30px;
+}
+
+#nav-list {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#nav-list:hover {
+  color: #7386d5;
+  border-bottom: 1px solid #fff;
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+}
