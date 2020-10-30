@@ -16,8 +16,19 @@ const JobDetail = () => {
 
   return (
     <div>
-      <h1>Hello there</h1>
-      {singleJob ? <div>{singleJob.title}</div> : ""}
+      <h1>Job Description</h1>
+      {singleJob ? (
+        <div>
+          {singleJob.title}
+          <br></br>
+          <br></br>
+          {singleJob.type}
+          <br></br>
+          {singleJob.company}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

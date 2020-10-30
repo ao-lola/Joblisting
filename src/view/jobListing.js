@@ -39,7 +39,7 @@ const Joblisting = () => {
 
   return (
     <div>
-      <h1>hello</h1>
+      <h1>JOB LISTINGS</h1>
       <input
         name="title"
         type="text"
