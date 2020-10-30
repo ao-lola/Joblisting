@@ -12,12 +12,12 @@ class Sidebar extends Component {
 
           <ul className="list-styled-components">
             <p>My dashboard</p>
-
+            {/* 
             <li className="active">
               <a href="#" id="nav-list">
                 <i class="fa fa-fw fa-search"></i> View Listings
               </a>
-            </li>
+            </li> */}
 
             <li className="active">
               <a href="#" id="nav-list">

@@ -8,6 +8,7 @@ const initialState = {
   jobs: null,
   loading: false,
   error: null,
+  singleJob: null,
 };
 
 export default (state = initialState, action) => {
@@ -22,6 +23,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         jobs: action.jobs,
+        loading: false,
+      };
+
+    case "FETCH_SINGLE_JOB_SUCCESS":
+      return {
+        ...state,
+        singleJob: action.jobDetail,
         loading: false,
       };
 
