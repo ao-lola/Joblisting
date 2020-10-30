@@ -20,7 +20,7 @@ class Sidebar extends Component {
             </li> */}
 
             <li className="active">
-              <a href="#" id="nav-list">
+              <a href="/" id="nav-list">
                 Latest Jobs
               </a>
             </li>

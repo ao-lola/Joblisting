@@ -1,12 +1,17 @@
-import React, { Component, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { fetchAllJobs } from "../actions/jobsAction";
+import { fetchAllJobs, searchAllLocation } from "../actions/jobsAction";
 
 import { useDispatch, useSelector } from "react-redux";
 
+import JobDetail from "./JobDetail";
+
 const Joblisting = () => {
+  const [title, setTitle] = useState("");
+  const [location, setLocation] = useState("");
+
   const { jobs } = useSelector((state) => state.jobs);
   //   const bloovingPlaces = useSelector((state) => state.allJobs.bloovingPlaces);
   const dispatch = useDispatch();
@@ -14,11 +19,40 @@ const Joblisting = () => {
   useEffect(() => {
     dispatch(fetchAllJobs());
   }, [dispatch]);
-  console.log("hello:", jobs);
+
+  const inputChangeHandler = (event) => {
+    const value = event.target.value;
+    const name = event.target.name;
+
+    if (name === "title") {
+      setTitle(value);
+    } else {
+      setLocation(value);
+    }
+  };
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+
+    dispatch(searchAllLocation(location, title));
+  };
+
   return (
     <div>
       <h1>hello</h1>
-      <input type="text" placeholder="Search by location.."></input>
+      <input
+        name="title"
+        type="text"
+        onChange={inputChangeHandler}
+        placeholder="Search by title.."
+      ></input>{" "}
+      <input
+        name="location"
+        type="text"
+        onChange={inputChangeHandler}
+        placeholder="Search by location.."
+      ></input>
+      <button onClick={handleSearch}>SEARCH</button>
       <div className="list-wrap">
         {jobs?.map((job) => (
           <div key={job.id}>

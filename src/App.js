@@ -21,7 +21,7 @@ class App extends Component {
         <div className="wrapper">
           <Sidebar />
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Joblisting />
             </Route>
             <Route path="/jobs/:jobId">

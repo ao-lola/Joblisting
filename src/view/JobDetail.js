@@ -12,7 +12,7 @@ const JobDetail = () => {
 
   useEffect(() => {
     dispatch(fetchSingleJob(jobId));
-  }, [dispatch, jobId]);
+  }, [dispatch]);
 
   return (
     <div>
